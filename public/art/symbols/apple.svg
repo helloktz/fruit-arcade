@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 80">
+  <title>Red apple</title>
+  <style>
+    :root {
+      --hot-glint: #ffbd91;
+      --blush: #f46d51;
+      --peel: #d92e36;
+      --peel-shade: #a31e35;
+      --darkest: #662037;
+      --leaf-glint: #e9ef83;
+      --leaf: #82a941;
+      --leaf-shade: #235d4c;
+      --outline: #452727;
+      --body-shadow: #862033;
+      --shine: #ffcbab;
+      --crease: #72222c;
+      --stem: #92613a;
+      --leaf-vein: #396036;
+    }
+  </style>
+  <defs>
+    <radialGradient id="body" cx="31%" cy="27%" r="77%">
+      <stop offset="0%" style="stop-color:var(--hot-glint)"/>
+      <stop offset="18%" style="stop-color:var(--blush)"/>
+      <stop offset="47%" style="stop-color:var(--peel)"/>
+      <stop offset="83%" style="stop-color:var(--peel-shade)"/>
+      <stop offset="100%" style="stop-color:var(--darkest)"/>
+    </radialGradient>
+    <radialGradient id="leaf" cx="34%" cy="27%" r="74%">
+      <stop offset="0%" style="stop-color:var(--leaf-glint)"/>
+      <stop offset="42%" style="stop-color:var(--leaf)"/>
+      <stop offset="100%" style="stop-color:var(--leaf-shade)"/>
+    </radialGradient>
+  </defs>
+  <g stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--outline)" stroke-width="2.6">
+    <path d="M47 23c-8-7-25-11-34 2C2 41 12 65 27 72c7 3 12-3 20-3s13 5 19 1C82 60 93 34 79 23c-10-8-23-6-32 0Z" fill="url(#body)"/>
+    <path d="M18 59c9 10 15 9 28 7 10-2 13 4 22-4 6-5 9-11 14-19-2 14-9 23-16 27-7 5-12-1-19-1s-11 5-17 4c-5-1-9-6-12-14Z" style="fill:var(--body-shadow)" stroke="none" opacity=".7"/>
+    <path d="M18 37c2-6 7-10 13-10M17 43v1" fill="none" style="stroke:var(--shine)" stroke-width="4.1"/>
+    <path d="M34 23q13 12 24 0" fill="none" style="stroke:var(--crease)" stroke-width="2.5"/>
+    <path d="M46 26c1-7-2-12-6-17l5-3c5 5 7 12 6 20Z" style="fill:var(--stem)"/>
+    <path d="M48 23c2-14 12-21 27-17-3 11-12 17-27 17Z" fill="url(#leaf)"/><path d="M50 21 67 10" fill="none" style="stroke:var(--leaf-vein)" stroke-width="1.5"/>
+  </g>
+</svg>

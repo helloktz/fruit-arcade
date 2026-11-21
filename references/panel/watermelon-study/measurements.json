@@ -1,0 +1,288 @@
+{
+  "L10": {
+    "source": "ruten/lamps/L10-watermelon.png",
+    "size_px": [
+      48,
+      48
+    ],
+    "ink_extent_roi": [
+      2,
+      10,
+      46,
+      41
+    ],
+    "ink_extent_px": [
+      3,
+      12,
+      43,
+      39
+    ],
+    "fit": {
+      "red_minus_green_threshold": 25,
+      "faces": [
+        {
+          "cx": 20.695121951219512,
+          "cy": 25.71951219512195,
+          "width": 7.106327085256036,
+          "height": 14.730853107113816,
+          "tilt_from_vertical_deg": -0.504439000093263,
+          "mask_pixels": 82
+        },
+        {
+          "cx": 40.06164383561644,
+          "cy": 25.86986301369863,
+          "width": 6.302759851570538,
+          "height": 14.683823806058594,
+          "tilt_from_vertical_deg": -1.7263046508464552,
+          "mask_pixels": 73
+        }
+      ],
+      "pitch_px": 19.366521884396924,
+      "vertical_offset_px": 0.15035081857667976
+    },
+    "sensitivity": [
+      {
+        "red_minus_green_threshold": 20,
+        "faces": [
+          {
+            "cx": 20.695121951219512,
+            "cy": 25.71951219512195,
+            "width": 7.106327085256036,
+            "height": 14.730853107113816,
+            "tilt_from_vertical_deg": -0.504439000093263,
+            "mask_pixels": 82
+          },
+          {
+            "cx": 40.06164383561644,
+            "cy": 25.86986301369863,
+            "width": 6.302759851570538,
+            "height": 14.683823806058594,
+            "tilt_from_vertical_deg": -1.7263046508464552,
+            "mask_pixels": 73
+          }
+        ],
+        "pitch_px": 19.366521884396924,
+        "vertical_offset_px": 0.15035081857667976
+      },
+      {
+        "red_minus_green_threshold": 25,
+        "faces": [
+          {
+            "cx": 20.695121951219512,
+            "cy": 25.71951219512195,
+            "width": 7.106327085256036,
+            "height": 14.730853107113816,
+            "tilt_from_vertical_deg": -0.504439000093263,
+            "mask_pixels": 82
+          },
+          {
+            "cx": 40.06164383561644,
+            "cy": 25.86986301369863,
+            "width": 6.302759851570538,
+            "height": 14.683823806058594,
+            "tilt_from_vertical_deg": -1.7263046508464552,
+            "mask_pixels": 73
+          }
+        ],
+        "pitch_px": 19.366521884396924,
+        "vertical_offset_px": 0.15035081857667976
+      },
+      {
+        "red_minus_green_threshold": 30,
+        "faces": [
+          {
+            "cx": 20.664556962025316,
+            "cy": 25.689873417721518,
+            "width": 6.8672233173706845,
+            "height": 14.70841522690845,
+            "tilt_from_vertical_deg": -0.2379020837824864,
+            "mask_pixels": 79
+          },
+          {
+            "cx": 40.09722222222222,
+            "cy": 25.805555555555557,
+            "width": 6.238447236915514,
+            "height": 14.617076881717779,
+            "tilt_from_vertical_deg": -0.8846347080267598,
+            "mask_pixels": 72
+          }
+        ],
+        "pitch_px": 19.432665260196906,
+        "vertical_offset_px": 0.11568213783403891
+      },
+      {
+        "red_minus_green_threshold": 35,
+        "faces": [
+          {
+            "cx": 20.686666666666667,
+            "cy": 25.74,
+            "width": 6.553487091602594,
+            "height": 14.676944362812277,
+            "tilt_from_vertical_deg": -0.5216550857970491,
+            "mask_pixels": 75
+          },
+          {
+            "cx": 40.09722222222222,
+            "cy": 25.805555555555557,
+            "width": 6.238447236915514,
+            "height": 14.617076881717779,
+            "tilt_from_vertical_deg": -0.8846347080267598,
+            "mask_pixels": 72
+          }
+        ],
+        "pitch_px": 19.410555555555554,
+        "vertical_offset_px": 0.0655555555555587
+      }
+    ]
+  },
+  "K02": {
+    "source": "ruten/key-symbols/K02-watermelon.png",
+    "size_px": [
+      45,
+      32
+    ],
+    "ink_extent_roi": [
+      4,
+      4,
+      42,
+      29
+    ],
+    "ink_extent_px": [
+      5,
+      4,
+      39,
+      28
+    ],
+    "fit": {
+      "red_minus_green_threshold": 25,
+      "faces": [
+        {
+          "cx": 20.091836734693878,
+          "cy": 16.785714285714285,
+          "width": 5.9200428834270005,
+          "height": 10.544453301320704,
+          "tilt_from_vertical_deg": 11.010587541688164,
+          "mask_pixels": 49
+        },
+        {
+          "cx": 36.0,
+          "cy": 16.35,
+          "width": 5.408835155870776,
+          "height": 9.549057663278422,
+          "tilt_from_vertical_deg": 10.206554632715843,
+          "mask_pixels": 40
+        }
+      ],
+      "pitch_px": 15.908163265306122,
+      "vertical_offset_px": -0.4357142857142833
+    },
+    "sensitivity": [
+      {
+        "red_minus_green_threshold": 20,
+        "faces": [
+          {
+            "cx": 20.04,
+            "cy": 16.82,
+            "width": 6.075857935507295,
+            "height": 10.460399148576167,
+            "tilt_from_vertical_deg": 10.16525719916632,
+            "mask_pixels": 50
+          },
+          {
+            "cx": 36.0,
+            "cy": 16.30952380952381,
+            "width": 5.7579476609464075,
+            "height": 9.35942696968794,
+            "tilt_from_vertical_deg": 8.965428989855964,
+            "mask_pixels": 42
+          }
+        ],
+        "pitch_px": 15.96,
+        "vertical_offset_px": -0.5104761904761901
+      },
+      {
+        "red_minus_green_threshold": 25,
+        "faces": [
+          {
+            "cx": 20.091836734693878,
+            "cy": 16.785714285714285,
+            "width": 5.9200428834270005,
+            "height": 10.544453301320704,
+            "tilt_from_vertical_deg": 11.010587541688164,
+            "mask_pixels": 49
+          },
+          {
+            "cx": 36.0,
+            "cy": 16.35,
+            "width": 5.408835155870776,
+            "height": 9.549057663278422,
+            "tilt_from_vertical_deg": 10.206554632715843,
+            "mask_pixels": 40
+          }
+        ],
+        "pitch_px": 15.908163265306122,
+        "vertical_offset_px": -0.4357142857142833
+      },
+      {
+        "red_minus_green_threshold": 30,
+        "faces": [
+          {
+            "cx": 20.145833333333332,
+            "cy": 16.770833333333332,
+            "width": 5.7733526281400795,
+            "height": 10.65306734586769,
+            "tilt_from_vertical_deg": 11.144977437681376,
+            "mask_pixels": 48
+          },
+          {
+            "cx": 36.0,
+            "cy": 16.394736842105264,
+            "width": 5.066350150580105,
+            "height": 9.757430113103796,
+            "tilt_from_vertical_deg": 9.542266501203446,
+            "mask_pixels": 38
+          }
+        ],
+        "pitch_px": 15.854166666666668,
+        "vertical_offset_px": -0.37609649122806843
+      },
+      {
+        "red_minus_green_threshold": 35,
+        "faces": [
+          {
+            "cx": 20.07777777777778,
+            "cy": 16.81111111111111,
+            "width": 5.649536166521865,
+            "height": 10.376981904621422,
+            "tilt_from_vertical_deg": 8.996398191861234,
+            "mask_pixels": 45
+          },
+          {
+            "cx": 35.970588235294116,
+            "cy": 16.558823529411764,
+            "width": 4.533127034600677,
+            "height": 9.620708171655485,
+            "tilt_from_vertical_deg": 4.155383464729691,
+            "mask_pixels": 34
+          }
+        ],
+        "pitch_px": 15.892810457516337,
+        "vertical_offset_px": -0.2522875816993455
+      }
+    ]
+  },
+  "design": {
+    "basis": "Use L10 as the primary scale; compare K02 independently.",
+    "view_box": [
+      96,
+      80
+    ],
+    "scale_from_primary": 2,
+    "pitch": 39,
+    "red_face_width": 13.4,
+    "red_face_height": 29.4,
+    "vertical_offset": 0,
+    "shared_tilt_deg": 0,
+    "stripe_constraint": "Two upper rind curves and their reflections about y=40. Highlights are separate."
+  }
+}

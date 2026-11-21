@@ -1,0 +1,13 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+
+# Historical photos and image comparisons containing those photos stay local.
+/references/panel/sources/
+/references/panel/photo/
+/references/panel/ruten/
+/references/panel/compare-*.png
+/references/panel/watermelon-study/*.png
+/references/panel/quality-review/symbols-*.png
+/references/panel/quality-review/watermelon-final.png

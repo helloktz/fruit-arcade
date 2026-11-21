@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#152021" />
+    <title data-i18n="title"></title>
+  </head>
+  <body>
+    <nav>
+      <b><i>✦</i> <span data-i18n="brand"></span></b>
+      <div>
+        <button id="sound" data-i18n="sound"></button
+        ><button id="rules" data-i18n="rules"></button
+        ><button id="history" data-i18n="history"></button
+        ><button id="settings" data-i18n="settings"></button>
+      </div>
+    </nav>
+    <main>
+      <section class="housing">
+        <div class="glass">
+          <div class="marquee" data-i18n="brand"></div>
+          <section class="meters">
+            <div class="meter">
+              <label data-i18n="winMeter"></label
+              ><canvas id="winLed" aria-hidden="true"></canvas
+              ><b class="sr" id="v2"></b>
+            </div>
+            <div class="meter">
+              <label data-i18n="creditMeter"></label
+              ><canvas id="creditLed" aria-hidden="true"></canvas
+              ><b class="sr" id="v0"></b>
+            </div>
+          </section>
+          <div class="board">
+            <canvas id="board" data-i18n-aria="canvas"></canvas>
+            <div class="eight-ball" aria-hidden="true">8</div>
+            <div class="inset-meter" aria-hidden="true">
+              <canvas id="stakeLed"></canvas>
+            </div>
+          </div>
+          <div class="keytray"><div id="fruits"></div></div>
+        </div>
+        <div class="base"><i></i><span data-i18n="subtitle"></span><i></i></div>
+      </section>
+      <aside>
+        <header>
+          <strong id="state"></strong>
+          <h1>
+            <span data-i18n="brandStart"></span><em data-i18n="brandEnd"></em>
+          </h1>
+          <div class="subtitle"><i></i><span data-i18n="subtitle"></span></div>
+        </header>
+        <section class="console">
+          <div class="consolehead">
+            <b data-i18n="controls"></b><span aria-hidden="true">▰ ▰ ▰</span>
+          </div>
+          <div class="readouts">
+            <div><label data-i18n="stakeLabel"></label><b id="v1"></b></div>
+            <div><label data-i18n="collectedLabel"></label><b id="v3"></b></div>
+          </div>
+          <div class="bar">
+            <span id="available"></span>
+            <div>
+              <button id="minus" data-i18n-aria="less">−</button
+              ><button id="plus" data-i18n-aria="more">＋</button>
+            </div>
+          </div>
+          <div class="actions">
+            <button id="clear" data-i18n="clear"></button
+            ><button id="repeat" data-i18n="repeat"></button
+            ><button id="max" data-i18n="max"></button
+            ><button id="auto" data-i18n="auto"></button
+            ><button id="gamble" data-i18n="gamble"></button
+            ><button id="collect" data-i18n="collect"></button>
+          </div>
+          <div id="guess" hidden>
+            <button id="small" data-i18n="small"></button
+            ><button id="big" data-i18n="big"></button>
+          </div>
+          <button class="start" id="start" data-i18n="start"></button>
+          <p id="message" aria-live="polite"></p>
+        </section>
+        <footer>
+          <span data-i18n="virtual"></span><span data-i18n="shortcuts"></span>
+        </footer>
+      </aside>
+    </main>
+    <dialog>
+      <form method="dialog"><button data-i18n-aria="close">×</button></form>
+      <article></article>
+    </dialog>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

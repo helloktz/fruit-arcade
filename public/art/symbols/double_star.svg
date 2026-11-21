@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 80">
+  <title>Two stars</title>
+  <style>
+    :root {
+      /* Palette shared by both stars. Hue shift is in degrees. */
+      --hue-shift: 0;
+      --outline: #263c36;
+      --base: #c3b85d;
+      --shadow: #8a9b55;
+      --highlight: #eee39b;
+    }
+
+    .body {
+      fill: var(--base);
+      stroke: var(--outline);
+    }
+
+    .shadow {
+      fill: var(--shadow);
+    }
+
+    .highlight {
+      fill: var(--highlight);
+    }
+
+    @supports (color: oklch(from #c3b85d l c calc(h + 0))) {
+      .body {
+        fill: oklch(from var(--base) l c calc(h + var(--hue-shift)));
+        stroke: oklch(from var(--outline) l c calc(h + var(--hue-shift)));
+      }
+
+      .shadow {
+        fill: oklch(from var(--shadow) l c calc(h + var(--hue-shift)));
+      }
+
+      .highlight {
+        fill: oklch(from var(--highlight) l c calc(h + var(--hue-shift)));
+      }
+    }
+  </style>
+  <defs>
+    <g id="star" stroke-linejoin="round">
+      <path class="body" d="M21 13 26 32 42 33 29 44 34 62 21 52 8 62 13 44 0 33 16 32Z" stroke-width="2.8"/>
+      <path class="shadow" d="M21 19 21 40 15 44 8 36 18 36Z M21 40 29 44 33 58 21 49Z"/>
+      <path class="highlight" d="M21 20 24 35 35 36 21 40Z M21 40 21 48 12 56 16 43Z"/>
+    </g>
+  </defs>
+  <use href="#star" x="4"/>
+  <use href="#star" x="50"/>
+</svg>

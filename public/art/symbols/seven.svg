@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 80">
+  <title>Scarlet triple seven</title>
+  <style>
+  :root {
+    --ink: #671a38;
+    --face: #d9313e;
+    --thick: #8f2440;
+    --glint: #ffc994;
+  }
+  </style>
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <defs>
+      <g id="seven">
+        <path d="M2 11h28l-1 9C21 27 16 38 16 51H4c1-13 7-23 13-31h-7l-2 6H1Z" stroke-width="2.5" style="fill:var(--face);stroke:var(--ink)"/>
+        <path d="M26 19h3c-8 10-13 18-13 32h-5c1-10 6-22 15-32Z" style="fill:var(--thick)"/>
+        <path d="M5 14h19M8 43q2-9 8-17" stroke-width="2.05" style="fill:none;stroke:var(--glint)"/>
+      </g>
+    </defs>
+    <use href="#seven" transform="translate(66 21) skewX(-5) scale(.9)"/>
+    <use href="#seven" transform="translate(9 21) skewX(-5) scale(.9)"/>
+    <use href="#seven" transform="translate(35 10) skewX(-5) scale(1.1)"/>
+  </g>
+</svg>

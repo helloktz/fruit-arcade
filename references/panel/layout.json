@@ -1,0 +1,70 @@
+{
+  "lamps": [
+    "orange", "bell", "cherry", "bar50", "bar", "bar25", "apple", "cherry", "plum",
+    "watermelon", "cherry", "chance", "apple", "cherry",
+    "orange", "bell", "cherry", "train", "all", "seven", "apple", "cherry", "plum",
+    "double_star", "cherry", "fate", "apple", "cherry"
+  ],
+  "keys": ["apple", "watermelon", "double_star", "seven", "bar", "bell", "plum", "orange", "cherry"],
+  "labels": {
+    "orange": "橘子", "bell": "雙鈴", "cherry": "櫻桃", "bar50": "BAR ×50",
+    "bar": "三連 BAR", "bar25": "BAR ×25", "apple": "蘋果", "plum": "藍果",
+    "watermelon": "西瓜", "chance": "機會", "train": "列車", "all": "全燈獎",
+    "seven": "777", "double_star": "雙星", "fate": "命運"
+  },
+  "features": {
+    "F01-win-meter": "左側得分窗", "F02-credit-meter": "右側積分窗",
+    "F03-centre": "中央主畫", "F04-eight-ball": "黃色 8 號球",
+    "F05-jp": "JP 圖區", "F06-centre-meter": "中央數字窗",
+    "F07-small": "小字圓標", "F08-big": "大字圓標"
+  },
+  "sources": {
+    "photo": {
+      "file": "sources/cabinet-photo.png",
+      "size": [640, 640],
+      "note": "用户提供的实机照片。有斜拍、玻璃反光和亮灯。",
+      "zones": {
+        "panel": {"size": [458, 542], "corners": [[41, 48], [515, 34], [542, 575], [88, 594]]},
+        "board": {"size": [324, 252], "corners": [[125, 201], [446, 193], [449, 443], [145, 454]]},
+        "keytray": {"size": [342, 76], "corners": [[130, 487], [468, 470], [469, 546], [135, 562]]},
+        "keyicons": {"size": [342, 23], "corners": [[135, 510], [467, 499], [469, 519], [137, 534]]}
+      },
+      "key_icon_spans": [[2, 30], [33, 64], [68, 100], [103, 134], [138, 173], [176, 211], [215, 252], [257, 294], [299, 338]],
+      "features": {
+        "F01-win-meter": [102, 98, 258, 175], "F02-credit-meter": [307, 93, 462, 165],
+        "F04-eight-ball": [267, 249, 324, 305], "F05-jp": [270, 300, 325, 363],
+        "F06-centre-meter": [259, 376, 333, 409], "F07-small": [219, 377, 252, 413],
+        "F08-big": [343, 376, 369, 411]
+      },
+      "conditions": {
+        "L11": "右侧反光覆盖部分果实", "L12": "反光遮住印字，采用正面照核对读法",
+        "L18": "暗部与反光削弱了列车细节", "L19": "徽标可见，细字适合查正面照",
+        "L26": "亮灯状态，颜色易过曝", "K02": "反光和暗色影响细纹",
+        "F05": "徽记细节受反光影响", "F07": "圆标局部受边缘反光影响"
+      }
+    },
+    "ruten": {
+      "file": "sources/ruten-front.jpg",
+      "size": [768, 800],
+      "url": "https://gcs.rimg.com.tw/g2/a/d4/3e/21901442501694_651.jpg",
+      "note": "较清楚的露天面板正面照，仍是 JPEG 拍照资料，图案边缘有压缩。",
+      "zones": {
+        "panel": {"size": [611, 725], "corners": [[79, 37], [690, 40], [693, 767], [81, 764]]},
+        "board": {"size": [432, 336], "corners": [[168, 223], [603, 224], [602, 562], [168, 562]]},
+        "keytray": {"size": [486, 109], "corners": [[141, 604], [630, 609], [628, 716], [141, 713]]},
+        "keyicons": {"size": [486, 32], "corners": [[142, 643], [629, 647], [627, 678], [141, 674]]}
+      },
+      "key_icon_spans": [[5, 50], [59, 104], [113, 158], [166, 212], [220, 267], [275, 321], [329, 375], [383, 429], [437, 483]],
+      "features": {
+        "F01-win-meter": [152, 88, 351, 188], "F02-credit-meter": [418, 89, 622, 192],
+        "F04-eight-ball": [358, 294, 428, 364], "F05-jp": [365, 370, 414, 424],
+        "F06-centre-meter": [333, 460, 437, 504], "F07-small": [274, 462, 323, 508],
+        "F08-big": [452, 460, 499, 507]
+      },
+      "conditions": {
+        "L10": "两瓣构图可读，细纹和油墨色须更高清资料确认",
+        "K02": "第二处同类图案，适合与 L10 交叉核对"
+      }
+    }
+  }
+}

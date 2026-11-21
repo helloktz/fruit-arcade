@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 80">
+  <title>Sweet orange</title>
+  <style>
+    :root {
+      --hot-glint: #ffed94;
+      --peel-light: #ffbd53;
+      --peel: #ed8524;
+      --peel-shade: #ba482a;
+      --leaf-glint: #e9ef83;
+      --leaf: #82a941;
+      --leaf-shade: #235d4c;
+      --outline: #452727;
+      --rear-leaf: #7c9e48;
+      --body-shadow: #b94c2c;
+      --stem: #69482d;
+      --leaf-vein: #396036;
+      --shine: #fff2b0;
+      --freckles: #9b4e23;
+      --warm-freckles: #fff39a;
+    }
+  </style>
+  <defs>
+    <radialGradient id="body" cx="43%" cy="33%" r="66%">
+      <stop offset="0%" style="stop-color:var(--hot-glint)"/>
+      <stop offset="32%" style="stop-color:var(--peel-light)"/>
+      <stop offset="68%" style="stop-color:var(--peel)"/>
+      <stop offset="100%" style="stop-color:var(--peel-shade)"/>
+    </radialGradient>
+    <radialGradient id="leaf" cx="34%" cy="27%" r="74%">
+      <stop offset="0%" style="stop-color:var(--leaf-glint)"/>
+      <stop offset="42%" style="stop-color:var(--leaf)"/>
+      <stop offset="100%" style="stop-color:var(--leaf-shade)"/>
+    </radialGradient>
+  </defs>
+  <g stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--outline)" stroke-width="2.6">
+    <path d="M48 24c-8-6-17-6-26-1C7 30 5 48 14 61c8 13 24 17 42 14 20-3 34-18 30-33-3-17-19-25-38-18Z" fill="url(#body)"/>
+    <path d="M18 62c12 10 29 11 43 4 14-7 20-16 23-25 6 15-7 30-28 34-17 3-30-1-38-13Z" style="fill:var(--body-shadow)" stroke="none" opacity=".6"/>
+    <path d="M41 23q0-10-7-16" fill="none" style="stroke:var(--stem)" stroke-width="3.4"/>
+    <path d="M43 22q5-14 21-14-5 13-21 14Z" style="fill:var(--rear-leaf)"/>
+    <path d="M40 19C28 11 11 22 9 43c14-3 27-11 31-24Z" fill="url(#leaf)"/>
+    <path d="M14 35q9-10 21-14" fill="none" style="stroke:var(--leaf-vein)" stroke-width="1.7"/>
+    <path d="M18 43c2-6 7-10 13-11" fill="none" style="stroke:var(--shine)" stroke-width="4.3"/>
+    <path d="M63 50h1m6-2h1m-4 7h1m-7 4h1m7 0h1m-11 6h1m15-12h1m-20 5h1m16-16h1" fill="none" style="stroke:var(--freckles)" stroke-width="1.8" opacity=".85"/>
+    <path d="M23 49h1m3-8h1m6-4h1m-7 21h1m5-10h1m4-16h1" fill="none" style="stroke:var(--warm-freckles)" stroke-width="1.8" opacity=".7"/>
+  </g>
+</svg>

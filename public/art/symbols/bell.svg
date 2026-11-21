@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 80">
+  <title>Paired brass bells</title>
+  <style>
+    :root {
+      --specular: #fff9c5;
+      --metal-light: #ffe064;
+      --metal: #f7b236;
+      --metal-shade: #de7c27;
+      --darkest: #a95028;
+      --loop: #de8d35;
+      --face-shadow: #dd7925;
+      --clapper: #c66d29;
+      --rim: #76c2d2;
+      --rim-glint: #c7eff3;
+      --shine: #fff6aa;
+      --outline: #452727;
+      --ribbon: #e84b31;
+      --ribbon-glint: #ffbe78;
+    }
+  </style>
+  <defs>
+    <radialGradient id="metal" cx="34%" cy="27%" r="74%">
+      <stop offset="0%" style="stop-color:var(--specular)"/>
+      <stop offset="30%" style="stop-color:var(--metal-light)"/>
+      <stop offset="59%" style="stop-color:var(--metal)"/>
+      <stop offset="82%" style="stop-color:var(--metal-shade)"/>
+      <stop offset="100%" style="stop-color:var(--darkest)"/>
+    </radialGradient>
+    <g id="bell">
+      <circle cx="40" cy="16" r="5" style="fill:var(--loop)"/>
+      <path d="M19 56c7-6 7-14 7-23 0-10 6-15 14-15s14 7 14 15c0 10 3 18 9 23Z" fill="url(#metal)"/>
+      <path d="M53 30c-3 15 2 21 8 25l-11 1c-7-8-8-16-7-28Z" style="fill:var(--face-shadow)" stroke="none" opacity=".63"/>
+      <circle cx="41" cy="63" r="5" style="fill:var(--clapper)"/>
+      <path d="M18 55c8 2 31 2 46-1l2 6c-13 6-34 6-49 1Z" style="fill:var(--rim)"/>
+      <path d="M30 41c-1-8 0-15 5-18" fill="none" style="stroke:var(--shine)" stroke-width="3.1"/>
+      <path d="M23 57q10 4 22 3" fill="none" style="stroke:var(--rim-glint)" stroke-width="2.8"/>
+    </g>
+  </defs>
+  <g stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--outline)" stroke-width="2.6">
+    <use href="#bell" transform="translate(22 0) rotate(18 40 40) scale(1.02)"/>
+    <use href="#bell" transform="translate(-11 5) rotate(-18 40 40)"/>
+    <g transform="translate(0 5)">
+      <path d="M44 20C37 18 26 7 33 5q7-2 14 11C53 6 63 6 63 10c1 6-10 9-17 11Z" style="fill:var(--ribbon)"/>
+      <path d="M35 8q5 3 9 8m7 0 7-4" fill="none" style="stroke:var(--ribbon-glint)" stroke-width="1.3"/>
+    </g>
+  </g>
+</svg>
