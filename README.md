@@ -48,7 +48,7 @@ npm run simulate -- 1000000
 
 ## 立式灯箱与跑灯调校
 
-[参考裁图库](references/panel/README.md)记录了两份原图的来源、逐格裁图坐标和网络候选。原始照片及包含照片的对照图保存在本地档案。[美术验收记录](references/panel/visual-acceptance.md)包含西瓜测量数据、15 个素材的自审结果、整机截图和复核方法。
+[参考裁图库](references/panel/README.md)记录了两份原图的来源、逐格裁图坐标和网络候选。原始照片、裁图和本地对照保存在 `.build/panel-reference/`。[美术验收记录](references/panel/visual-acceptance.md)包含西瓜测量数据、15 个素材的自审结果、整机截图和复核方法。
 
 机台外壳、七段数码窗、环形灯盘和九键押注排按参考照片的功能位置重新组合。面板采用两张原创丝网印刷风格插画，玻璃边饰在 `public/art/backglass-cobalt.webp`，飞行邮差与海岸果园在 `public/art/orchard-courier.webp`。`src/style.css` 将背板从深蓝过渡到亮青蓝与草绿，由冷色网格、红色数码窗和亮黄跑灯构成冷暖层次。中央窗口显示本局押注，左右窗口分别显示待领得分和当前积分。转轮只在转轮奖励阶段出现。
 

@@ -1,6 +1,6 @@
 {
   "L10": {
-    "source": "ruten/lamps/L10-watermelon.png",
+    "source": "crops/ruten/lamps/L10-watermelon.png",
     "size_px": [
       48,
       48
@@ -136,7 +136,7 @@
     ]
   },
   "K02": {
-    "source": "ruten/key-symbols/K02-watermelon.png",
+    "source": "crops/ruten/key-symbols/K02-watermelon.png",
     "size_px": [
       45,
       32

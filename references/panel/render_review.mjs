@@ -6,7 +6,10 @@ import { chromium } from "playwright";
 
 const library = fileURLToPath(new URL("./", import.meta.url));
 const art = fileURLToPath(new URL("../../public/art/symbols/", import.meta.url));
-const output = join(library, "quality-review");
+const archive = fileURLToPath(new URL("../../.build/panel-reference/", import.meta.url));
+const crops = join(archive, "crops");
+const comparisons = join(archive, "comparisons");
+const previews = join(archive, "previews");
 const layout = JSON.parse(await readFile(join(library, "layout.json"), "utf8"));
 const url = process.argv[2] ?? "http://127.0.0.1:4173";
 const browser = await chromium.launch({ channel: process.env.PW_CHANNEL });
@@ -101,8 +104,8 @@ async function gallery(desktop, mobile) {
   const rows = await Promise.all(picks.map(async ([id, index]) => {
     const file = `${lampId(index)}-${id}.png`;
     const [photo, ruten, svg] = await Promise.all([
-      readFile(join(library, "photo", "lamps", file)),
-      readFile(join(library, "ruten", "lamps", file)),
+      readFile(join(crops, "photo", "lamps", file)),
+      readFile(join(crops, "ruten", "lamps", file)),
       readFile(join(art, `${id}.svg`)),
     ]);
     return `<div class="row"><strong>${lampId(index)}<br>${layout.labels[id]}</strong>
@@ -121,7 +124,7 @@ async function gallery(desktop, mobile) {
       .large{width:130px;height:108px;background:linear-gradient(#f7faf4,#c2dbe6)}
     </style><header>${columnLabels}</header>${rows.slice(group * 5, group * 5 + 5).join("")}`);
     await sheet.evaluate(() => Promise.all(Array.from(document.images, (image) => image.decode())));
-    await sheet.screenshot({ path: join(output, `symbols-${group + 1}.png`) });
+    await sheet.screenshot({ path: join(comparisons, `symbols-${group + 1}.png`) });
   }
   await sheet.close();
 }
@@ -130,7 +133,7 @@ async function watermelon(desktop, mobile) {
   const sheet = await browser.newPage({ viewport: { width: 760, height: 600 } });
   const index = layout.lamps.indexOf("watermelon");
   const svg = await readFile(join(art, "watermelon.svg"));
-  const crop = (name) => readFile(join(library, "ruten", name));
+  const crop = (name) => readFile(join(crops, "ruten", name));
   const [lamp, key] = await Promise.all([
     crop("lamps/L10-watermelon.png"), crop("key-symbols/K02-watermelon.png"),
   ]);
@@ -158,7 +161,7 @@ async function watermelon(desktop, mobile) {
     <div class="native"><figure>桌面原尺寸${nativeCell(desktop, index)}</figure><figure>手機原尺寸${nativeCell(mobile, index)}</figure></div>
     </div><figure>SVG 直接渲染<img class="large" src="${data("svg+xml", svg)}"></figure></main>`);
   await sheet.evaluate(() => Promise.all(Array.from(document.images, (image) => image.decode())));
-  await sheet.screenshot({ path: join(output, "watermelon-final.png") });
+  await sheet.screenshot({ path: join(comparisons, "watermelon-final.png") });
   await sheet.close();
 }
 
@@ -180,13 +183,13 @@ async function reward(draws, mode, file) {
       assert.equal(await page.evaluate(() => window.drawn.lit), 28);
     }
   }
-  await page.locator(".housing").screenshot({ path: join(output, file) });
+  await page.locator(".housing").screenshot({ path: join(previews, file) });
   assert.deepEqual(errors, []);
   await page.close();
 }
 
 try {
-  await mkdir(output, { recursive: true });
+  await Promise.all([comparisons, previews].map((dir) => mkdir(dir, { recursive: true })));
   const desktop = await open({ width: 1280, height: 900 });
   const mobile = await open({ width: 390, height: 844 });
   const desktopCells = await boardCells(desktop.page);
@@ -195,7 +198,7 @@ try {
   await gallery(desktopCells, mobileCells);
   await watermelon(desktopCells, mobileCells);
   for (const [name, { page, errors }] of [["desktop", desktop], ["mobile", mobile]]) {
-    await page.locator("main").screenshot({ path: join(output, `${name}.png`) });
+    await page.locator("main").screenshot({ path: join(previews, `${name}.png`) });
     assert.deepEqual(errors, []);
     await page.close();
   }

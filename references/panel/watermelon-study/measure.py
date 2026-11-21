@@ -8,9 +8,10 @@ from subprocess import check_output
 
 
 HERE = Path(__file__).resolve().parent
+ARCHIVE = HERE.parents[2] / ".build" / "panel-reference"
 SOURCES = {
-    "L10": ("ruten/lamps/L10-watermelon.png", (2, 10, 46, 41)),
-    "K02": ("ruten/key-symbols/K02-watermelon.png", (4, 4, 42, 29)),
+    "L10": ("crops/ruten/lamps/L10-watermelon.png", (2, 10, 46, 41)),
+    "K02": ("crops/ruten/key-symbols/K02-watermelon.png", (4, 4, 42, 29)),
 }
 
 
@@ -56,7 +57,7 @@ def ink_extent(rgb, width, roi):
 
 
 def measure(relative, roi):
-    width, height, rgb = pixels(HERE.parent / relative)
+    width, height, rgb = pixels(ARCHIVE / relative)
     cuts = []
     for threshold in (20, 25, 30, 35):
         # Only segment dark red flesh. Pale rims, green rind and glare are excluded.

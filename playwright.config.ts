@@ -1,6 +1,7 @@
 import { defineConfig } from "@playwright/test";
 export default defineConfig({
   testDir: "./tests/browser",
+  outputDir: "./.build/test-results/playwright",
   use: { baseURL: "http://127.0.0.1:5176", channel: process.env.PW_CHANNEL },
   webServer: {
     command: "npm run dev -- --host 127.0.0.1 --port 5176 --strictPort",

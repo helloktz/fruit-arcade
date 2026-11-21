@@ -2,16 +2,16 @@
 
 用同一編號對照兩份原圖。`photo` 是實機照，`ruten` 是較清楚的正面面板照。正面照仍有拍攝和 JPEG 壓縮痕跡。這兩份照片及其裁圖用於參考和驗收，未查到面板印刷圖的公開再使用授權。
 
-公開版本保留來源網址、座標索引、量測數據與生成腳本。本頁的原圖、裁圖與含原照的對照圖連結適用於有這些檔案的本機工作區。要重新生成裁圖，先把可用的兩張參考照放到下表對應的 `sources/` 路徑。
+公開版本保留來源網址、座標索引、量測數據與生成腳本。原圖、裁圖和對照圖位於本機的 `.build/panel-reference/`。要重新生成裁圖，先把可用的兩張參考照放到該目錄的 `sources/` 下。
 
 | 來源代號 | 原圖 | 觀察條件 |
 | --- | --- | --- |
-| `photo` | [用戶提供的實機照，640×640](sources/cabinet-photo.png) | 斜拍、玻璃反光，`L26` 當時亮燈。保留了機櫃和數字窗在使用時的狀態。 |
-| `ruten` | [露天正面照，768×800](sources/ruten-front.jpg) · [原圖片地址](https://gcs.rimg.com.tw/g2/a/d4/3e/21901442501694_651.jpg) | 以這份確認格序、字形及大色塊。原商品頁本次未能開啟，原始 JPEG 已保存。 |
+| `photo` | [用戶提供的實機照，640×640](../../.build/panel-reference/sources/cabinet-photo.png) | 斜拍、玻璃反光，`L26` 當時亮燈。保留了機櫃和數字窗在使用時的狀態。 |
+| `ruten` | [露天正面照，768×800](../../.build/panel-reference/sources/ruten-front.jpg) · [原圖片地址](https://gcs.rimg.com.tw/g2/a/d4/3e/21901442501694_651.jpg) | 以這份確認格序、字形及大色塊。原商品頁本次未能開啟，原始 JPEG 已保存。 |
 
 ## 查找裁圖
 
-[逐圖索引 CSV](index.csv) 記載來源、檔案、位置、裁切座標、像素尺寸和影響判讀的現象。`crop_from` 指向座標所在的圖，原點為該圖左上角，`right` 和 `bottom` 為排除邊界。每個來源各有 **54 張元素裁圖**。
+[逐圖索引 CSV](index.csv) 記載來源、檔案、位置、裁切座標、像素尺寸和影響判讀的現象。`image` 和 `crop_from` 都相對於 `.build/panel-reference/`。`crop_from` 指向座標所在的圖，原點為該圖左上角，`right` 和 `bottom` 為排除邊界。`crops/photo/` 和 `crops/ruten/` 各有 **54 張元素裁圖**。
 
 | 目錄 | 內容 |
 | --- | --- |
@@ -22,19 +22,19 @@
 
 每份來源也保存了獨立校正後的 `panel.png`、`board.png`、`keytray.png` 和 `keyicons.png`。下列對照圖每組左邊是實機照、右邊是露天照。預覽採用最近鄰放大，便於看像素邊界。
 
-- [28 個燈位對照](compare-lamps.png)
-- [九個押注圖案對照](compare-key-symbols.png)
-- [九組完整押注鍵對照](compare-keys.png)
+- [28 個燈位對照](../../.build/panel-reference/comparisons/compare-lamps.png)
+- [九個押注圖案對照](../../.build/panel-reference/comparisons/compare-key-symbols.png)
+- [九組完整押注鍵對照](../../.build/panel-reference/comparisons/compare-keys.png)
 
 | 重點 | 實機照 | 露天照 |
 | --- | --- | --- |
-| 西瓜燈格 `L10` | [查看](photo/lamps/L10-watermelon.png) | [查看](ruten/lamps/L10-watermelon.png) |
-| 西瓜押注圖 `K02` | [查看](photo/key-symbols/K02-watermelon.png) | [查看](ruten/key-symbols/K02-watermelon.png) |
-| 機會 `L12` | [查看](photo/lamps/L12-chance.png) | [查看](ruten/lamps/L12-chance.png) |
-| 列車 `L18` | [查看](photo/lamps/L18-train.png) | [查看](ruten/lamps/L18-train.png) |
-| 全燈獎 `L19` | [查看](photo/lamps/L19-all.png) | [查看](ruten/lamps/L19-all.png) |
-| 雙星 `L24` | [查看](photo/lamps/L24-double_star.png) | [查看](ruten/lamps/L24-double_star.png) |
-| 命運 `L26` | [查看](photo/lamps/L26-fate.png) | [查看](ruten/lamps/L26-fate.png) |
+| 西瓜燈格 `L10` | [查看](../../.build/panel-reference/crops/photo/lamps/L10-watermelon.png) | [查看](../../.build/panel-reference/crops/ruten/lamps/L10-watermelon.png) |
+| 西瓜押注圖 `K02` | [查看](../../.build/panel-reference/crops/photo/key-symbols/K02-watermelon.png) | [查看](../../.build/panel-reference/crops/ruten/key-symbols/K02-watermelon.png) |
+| 機會 `L12` | [查看](../../.build/panel-reference/crops/photo/lamps/L12-chance.png) | [查看](../../.build/panel-reference/crops/ruten/lamps/L12-chance.png) |
+| 列車 `L18` | [查看](../../.build/panel-reference/crops/photo/lamps/L18-train.png) | [查看](../../.build/panel-reference/crops/ruten/lamps/L18-train.png) |
+| 全燈獎 `L19` | [查看](../../.build/panel-reference/crops/photo/lamps/L19-all.png) | [查看](../../.build/panel-reference/crops/ruten/lamps/L19-all.png) |
+| 雙星 `L24` | [查看](../../.build/panel-reference/crops/photo/lamps/L24-double_star.png) | [查看](../../.build/panel-reference/crops/ruten/lamps/L24-double_star.png) |
+| 命運 `L26` | [查看](../../.build/panel-reference/crops/photo/lamps/L26-fate.png) | [查看](../../.build/panel-reference/crops/ruten/lamps/L26-fate.png) |
 
 ## 網路素材核對
 

@@ -1,13 +1,10 @@
-node_modules/
-dist/
-test-results/
-playwright-report/
+# Local reference files, tool state, and generated test artifacts
+/.build/
 
-# Historical photos and image comparisons containing those photos stay local.
-/references/panel/sources/
-/references/panel/photo/
-/references/panel/ruten/
-/references/panel/compare-*.png
-/references/panel/watermelon-study/*.png
-/references/panel/quality-review/symbols-*.png
-/references/panel/quality-review/watermelon-final.png
+# Dependencies and production output
+/node_modules/
+/dist/
+
+# Editor metadata and optional HTML reports
+/.openidea
+/playwright-report/

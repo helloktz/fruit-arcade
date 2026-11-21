@@ -2,7 +2,7 @@
 
 这套方法适用于一份低像素原图和一套可替换的 SVG 素材。每个图案先核对能从资料确认的形状，再在游戏实际尺寸下检查。整机复查时，分别看背板印刷、灯格、数码窗和亮灯演出。
 
-含参考照片的叠图和分格对照链接用于本地档案。公开版本可直接查看测量数据、终稿 SVG 及原创机台截图。重新生成对照图之前，按[参考裁图库](README.md)准备本地照片和裁图。
+含参考照片的叠图和分格对照保存在本机的 `.build/panel-reference/`。公开版本可直接查看测量数据、终稿 SVG 及原创机台截图。重新生成对照图之前，按[参考裁图库](README.md)准备本地照片和裁图。
 
 ## 怎样验收一个图案
 
@@ -24,11 +24,11 @@
 | 西瓜纹 | 两份照片都看得到深条纹向切面内收。锯齿幅度与落点无法逐点量出。 | 上半部两条闭合带有独立、疏密不一的起伏，沿水平轴反射得到下半部两条。共四条内纹，外轮廓另算。青色高光在条纹下面，放大后可检查每条纹的走向。 |
 | 瓜肉 | 露天 `L10` 的红色窄处只有约 6–7 个源像素。两份照片的灯位和押注键没有对应得上的离散种子点。 | 用红色渐变表现中亮边暗的切面，保留独立高光。瓜籽数量、位置、原机准确油墨色仍无法确认。 |
 
-[测量叠图](watermelon-study/measurement-overlay.png) · [掩模阈值与测量数值](watermelon-study/measurements.json) · [终稿与两种实际尺寸](quality-review/watermelon-final.png) · [终稿 SVG](../../public/art/symbols/watermelon.svg)
+[测量叠图](../../.build/panel-reference/studies/watermelon/measurement-overlay.png) · [掩模阈值与测量数值](watermelon-study/measurements.json) · [终稿与两种实际尺寸](../../.build/panel-reference/comparisons/watermelon-final.png) · [终稿 SVG](../../public/art/symbols/watermelon.svg)
 
 ## 15 个素材逐项自审
 
-以下为代表格。同一图案的其他格位由浏览器逐坐标核对资源，包括 `L01` 在内的完整顺序见 [L01–L28](compare-lamps.png)。三个表依次对应 [对照一](quality-review/symbols-1.png)、[对照二](quality-review/symbols-2.png) 和 [对照三](quality-review/symbols-3.png)。
+以下为代表格。同一图案的其他格位由浏览器逐坐标核对资源，包括 `L01` 在内的完整顺序见 [L01–L28](../../.build/panel-reference/comparisons/compare-lamps.png)。三个表依次对应 [对照一](../../.build/panel-reference/comparisons/symbols-1.png)、[对照二](../../.build/panel-reference/comparisons/symbols-2.png) 和 [对照三](../../.build/panel-reference/comparisons/symbols-3.png)。
 
 | 代表格与按键 | 保留或修订的特征 | 实际尺寸检查 |
 | --- | --- | --- |
@@ -79,4 +79,4 @@ npm test
 npm run test:e2e
 ```
 
-截图脚本从 `layout.json` 读取灯位和押注键的参照顺序，检查实际页面 Canvas 的 28 个坐标、九个键的倍率与资源、西瓜复用结构、三转轮素材来源及特殊灯态，并捕获页面异常。奖励样本的随机数由截图脚本注入，棋盘与玩法仍走正式入口。照片、叠图和验收截图均留在参考库，生产页面加载的是原创插图和 SVG。实机色卡、印刷文件、实机测时和音频母带仍缺失，所以这轮验证范围为网页中的图形、布局和演出集成。
+截图脚本从 `layout.json` 读取灯位和押注键的参照顺序，检查实际页面 Canvas 的 28 个坐标、九个键的倍率与资源、西瓜复用结构、三转轮素材来源及特殊灯态，并捕获页面异常。奖励样本的随机数由截图脚本注入，棋盘与玩法仍走正式入口。新生成的整机和奖励截图写入 `.build/panel-reference/previews/`，含原照的对照图写入同级 `comparisons/`。生产页面加载的是原创插图和 SVG。实机色卡、印刷文件、实机测时和音频母带仍缺失，所以这轮验证范围为网页中的图形、布局和演出集成。

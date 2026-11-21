@@ -7,8 +7,9 @@ import subprocess
 import tempfile
 
 
-ROOT = Path(__file__).resolve().parent
-LAYOUT = json.loads((ROOT / "layout.json").read_text(encoding="utf-8"))
+CATALOG = Path(__file__).resolve().parent
+ARCHIVE = CATALOG.parents[1] / ".build" / "panel-reference"
+LAYOUT = json.loads((CATALOG / "layout.json").read_text(encoding="utf-8"))
 LAMP_CELLS = (
     [(x, 0) for x in range(9)]
     + [(8, y) for y in range(1, 7)]
@@ -19,7 +20,7 @@ LAMP_CELLS = (
 
 def magick(*args, capture=False):
     return subprocess.run(
-        ["magick", *map(str, args)], cwd=ROOT, check=True,
+        ["magick", *map(str, args)], cwd=ARCHIVE, check=True,
         capture_output=capture, text=True,
     ).stdout
 
@@ -43,9 +44,9 @@ def build_source(name, source):
     if [width, height] != source["size"]:
         raise ValueError(f"{source_path} has different dimensions from layout.json")
 
-    output = Path(name)
+    output = Path("crops") / name
     for part in ("lamps", "keys", "key-symbols", "features"):
-        (ROOT / output / part).mkdir(parents=True, exist_ok=True)
+        (ARCHIVE / output / part).mkdir(parents=True, exist_ok=True)
     zones = source["zones"]
     for zone, spec in zones.items():
         rectify(source_path, output / f"{zone}.png", spec["corners"], spec["size"])
@@ -107,12 +108,13 @@ def make_sheet(rows, part, name, columns):
                    "(", *panels, "+append", ")", "-append", "+set", "label", out)
             cards.append(out)
         magick("montage", *cards, "-tile", f"{columns}x", "-geometry", "+5+5",
-               "-background", "#e0ddd5", name)
+               "-background", "#e0ddd5", Path("comparisons") / name)
 
 
 def main():
+    (ARCHIVE / "comparisons").mkdir(parents=True, exist_ok=True)
     rows = [row for name, source in LAYOUT["sources"].items() for row in build_source(name, source)]
-    with (ROOT / "index.csv").open("w", newline="", encoding="utf-8-sig") as file:
+    with (CATALOG / "index.csv").open("w", newline="", encoding="utf-8-sig") as file:
         writer = csv.DictWriter(file, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
